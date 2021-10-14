@@ -1,0 +1,2774 @@
+@charset "UTF-8";
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+@media (max-width: 770px) {
+  .entrance-new .card {
+    max-width: 80% !important;
+  }
+  .entrance-new .card-consultations {
+    display: none !important;
+  }
+
+  .header-inner {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+@media (max-width: 1770px) {
+  .header-inner {
+    max-width: 1550px !important;
+  }
+
+  .header-wrapper {
+    margin: 0 auto;
+  }
+}
+@media (max-width: 1660px) {
+  .header-inner {
+    max-width: 1460px !important;
+  }
+
+  .header-wrapper {
+    margin: 0 auto;
+  }
+}
+@media (max-width: 1500px) {
+  .header-inner {
+    max-width: 1370px !important;
+  }
+
+  .header-wrapper {
+    margin: 0 auto;
+  }
+
+  .contact-form {
+    left: 20%;
+  }
+
+  .feature .graph-img {
+    bottom: -30px !important;
+    right: 261px !important;
+    max-width: 40% !important;
+  }
+  .feature .logo-img {
+    right: 240px !important;
+  }
+  .feature .racket-img {
+    right: 110px !important;
+  }
+}
+@media (max-width: 1395px) {
+  .header-inner {
+    max-width: 1270px !important;
+  }
+
+  .header-wrapper {
+    margin: 0 auto;
+  }
+
+  .scholarship .team-title {
+    width: 680px !important;
+  }
+}
+@media (max-width: 1345px) {
+  .header-inner {
+    max-width: 1270px !important;
+  }
+
+  .header-wrapper {
+    margin: 0 auto;
+  }
+
+  .feature .graph-img {
+    max-width: 50% !important;
+    bottom: -30px !important;
+    right: 60px !important;
+  }
+}
+@media (max-width: 1336px) {
+  .feature .main-graphs {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+  }
+
+  .scholarship .main-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .scholarship .main-content .team {
+    padding-top: 0 !important;
+  }
+  .scholarship .main-content .team .btn-block {
+    margin-top: 15px !important;
+  }
+  .scholarship .main-content .team-title {
+    width: 800px !important;
+  }
+  .scholarship .main-content .team-title img {
+    display: none;
+  }
+}
+@media (max-width: 1280px) {
+  nav {
+    -ms-flex-pack: distribute !important;
+        justify-content: space-around !important;
+  }
+  nav .nav-items {
+    padding: 0 4px;
+  }
+
+  .feature .cards {
+    overflow-x: scroll;
+    width: auto;
+    white-space: nowrap;
+  }
+  .feature img {
+    padding-bottom: 10px;
+    margin-right: 10px;
+  }
+  .feature .structure-main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .feature .structure-main img {
+    margin-right: 0 !important;
+  }
+  .feature .structure-main .racket-img {
+    max-width: 10% !important;
+    top: 230px !important;
+    right: 670px !important;
+  }
+  .feature .structure-main .graph-img {
+    max-width: 50% !important;
+    bottom: -220px !important;
+    right: 320px !important;
+  }
+  .feature .structure-main .logo-img {
+    bottom: -150px !important;
+  }
+  .feature .graphs-block {
+    padding-top: 250px !important;
+  }
+
+  .service .cards {
+    overflow-x: scroll;
+    width: auto;
+  }
+  .service .item-card .card {
+    min-height: 600px;
+    margin-right: 12px;
+    min-width: 350px;
+  }
+  .service .info p::before {
+    left: -16% !important;
+  }
+
+  .entrance-new .cards {
+    -ms-flex-pack: distribute !important;
+        justify-content: space-around !important;
+  }
+  .entrance-new .card {
+    max-width: 40% !important;
+  }
+  .entrance-new .card .down-info {
+    padding: 7px 6px 5px 6px !important;
+  }
+  .entrance-new .card-consultations {
+    max-width: 40%;
+  }
+
+  .about-us .content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .about-us p {
+    font-size: 13px;
+  }
+  .about-us img {
+    max-width: 50%;
+    padding-top: 40px;
+  }
+
+  .team-project .content {
+    -ms-flex-pack: distribute !important;
+        justify-content: space-around !important;
+  }
+
+  .join-univ .content {
+    -ms-grid-columns: 300px 300px 300px !important;
+    grid-template-columns: 300px 300px 300px !important;
+  }
+
+  .skills {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .skills .item {
+    background-position: center !important;
+    padding-top: 40px;
+  }
+
+  .scholarship .content {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+  }
+  .scholarship .content .team {
+    padding-top: 80px;
+  }
+}
+@media (max-width: 1264px) {
+  .entrance .img-flag {
+    display: none !important;
+  }
+}
+@media (max-width: 1131px) {
+  .header-wrapper nav a {
+    font-size: 13px;
+  }
+  .header-wrapper .logo {
+    margin-left: 0 !important;
+  }
+
+  .join-univ .content {
+    -ms-grid-columns: 250px 250px 250px !important;
+    grid-template-columns: 250px 250px 250px !important;
+  }
+
+  header .contact-btn {
+    margin-right: 0 !important;
+  }
+}
+@media (max-width: 980px) {
+  .feature .info-card {
+    width: 450px !important;
+  }
+
+  .team-project .content {
+    overflow-x: scroll;
+    width: auto;
+    -webkit-box-pack: inherit !important;
+        -ms-flex-pack: inherit !important;
+            justify-content: inherit !important;
+  }
+  .team-project .content .item {
+    margin-right: 10px !important;
+  }
+
+  .contact-form-block {
+    width: 75% !important;
+  }
+
+  header .contact-btn {
+    padding: 12px 5px !important;
+  }
+
+  .scholarship .subtitle-block {
+    width: 450px !important;
+  }
+}
+@media (max-width: 975px) {
+  .contact-form input {
+    width: 250px !important;
+  }
+}
+@media (max-width: 900px) {
+  header a {
+    font-size: 12px !important;
+  }
+}
+@media (max-width: 845px) {
+  .contact-form h2 {
+    font-size: 50px !important;
+  }
+  .contact-form .info-form {
+    width: 85% !important;
+  }
+}
+@media (max-width: 770px) {
+  .header-inner {
+    height: 100vh !important;
+  }
+
+  .feature .structure-main .racket-img {
+    max-width: 25% !important;
+    top: 180px !important;
+    right: 427px !important;
+  }
+
+  .mini-title-block .line {
+    margin-left: -20px;
+  }
+  .mini-title-block .mini-title {
+    padding-left: 10px !important;
+  }
+
+  .join-univ .item-collection {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .feature .feature-info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .feature .feature-info .info-card {
+    margin-top: 10px !important;
+  }
+  .feature .structure-main {
+    -webkit-box-align: inherit;
+        -ms-flex-align: inherit;
+            align-items: inherit;
+  }
+  .feature .structure-main h4 {
+    padding: 10px 0;
+  }
+  .feature .structure-main .graph-img {
+    max-width: 100% !important;
+    bottom: -260px !important;
+    right: 0 !important;
+  }
+  .feature .structure-main .logo-img {
+    bottom: -200px !important;
+    right: 30px !important;
+  }
+  .feature .structure-main .sub-title-block {
+    width: 465px !important;
+    padding-top: 5px !important;
+  }
+  .feature .structure-main .structure-img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: inherit;
+        -ms-flex-align: inherit;
+            align-items: inherit;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .feature .structure-main .structure-img .mini-title {
+    margin: 0 auto !important;
+    max-width: 550px !important;
+    text-align: center;
+    padding-bottom: 10px;
+    font-size: 20px !important;
+    line-height: 25px !important;
+  }
+  .feature .structure-main .info-structure {
+    padding: 10px 0 !important;
+  }
+
+  .mainSection h2 {
+    font-size: 25px !important;
+  }
+  .mainSection.entrance-new .card {
+    max-width: 100% !important;
+  }
+  .mainSection.entrance-new .card-consultations {
+    display: none !important;
+  }
+
+  .header-inner {
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+    text-align: center;
+    background: no-repeat url("img/bgphone.jpg") !important;
+  }
+  .header-inner .card-info {
+    border-radius: 30px;
+    padding: 15px;
+  }
+  .header-inner .card-info .content {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .header-inner .card-info .content .default-title {
+    margin: 0 auto;
+  }
+
+  .about-us img {
+    max-width: inherit;
+  }
+
+  .feature img {
+    max-width: 100%;
+  }
+
+  .join-univ .content {
+    -ms-grid-columns: 390px 290px !important;
+    grid-template-columns: 390px 290px !important;
+  }
+  .join-univ .content h3 {
+    font-size: 14px !important;
+  }
+  .join-univ .content .__one {
+    -ms-grid-row: 1 !important;
+        grid-row-start: 1 !important;
+    -ms-grid-row-span: 1 !important;
+    grid-row-end: 2 !important;
+    -ms-grid-column: 2 !important;
+        grid-column-start: 2 !important;
+    -ms-grid-column-span: 1 !important;
+    grid-column-end: 3 !important;
+  }
+  .join-univ .content .__three {
+    background: no-repeat url(img/five_phone.jpg) !important;
+    -ms-grid-row: 2;
+        grid-row-start: 2;
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    -ms-grid-column-span: 2;
+    grid-column-end: 3;
+    max-width: inherit !important;
+  }
+  .join-univ .content .__three .title {
+    border-radius: 0;
+    max-width: inherit;
+    width: 100%;
+  }
+  .join-univ .content .__three .title h3 {
+    max-width: inherit;
+  }
+
+  header {
+    position: fixed !important;
+    width: 100% !important;
+    padding-bottom: 15px;
+  }
+  header nav {
+    -webkit-box-pack: justify !important;
+        -ms-flex-pack: justify !important;
+            justify-content: space-between !important;
+  }
+  header nav .nav-items, header nav .contact-btn {
+    display: none;
+  }
+  header nav .logo {
+    margin-left: 30px !important;
+  }
+
+  body .tab-bar {
+    display: block !important;
+  }
+  body .burger {
+    display: block !important;
+  }
+  body .tab-burger-menu {
+    display: block !important;
+  }
+
+  .team-project .content {
+    overflow-x: scroll;
+    width: auto;
+    -webkit-box-pack: inherit !important;
+        -ms-flex-pack: inherit !important;
+            justify-content: inherit !important;
+  }
+
+  footer .nav-items, footer button {
+    display: none;
+  }
+
+  .scholarship .main-content .team-title {
+    width: 670px !important;
+  }
+  .scholarship .main-content .team-title h3 {
+    font-size: 16px !important;
+  }
+  .scholarship .under-blocks .subtitle-block {
+    width: 362px !important;
+  }
+  .scholarship .under-blocks .subtitle-block p {
+    font-size: 17px !important;
+  }
+  .scholarship .under-blocks .subtitle-block .mini-subtitle {
+    max-width: 240px !important;
+    margin: 0 auto !important;
+  }
+  .scholarship .under-blocks .subtitle-block .row-titles {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .scholarship .under-blocks .subtitle-block .row-titles .second-block {
+    width: 362px !important;
+  }
+  .scholarship .under-blocks .subtitle-block .row-titles .subsub-title-block.first_title {
+    border-radius: 0 !important;
+    padding: 0 !important;
+    -webkit-box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.25) !important;
+            box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.25) !important;
+  }
+  .scholarship .under-blocks .subtitle-block .row-titles .subsub-title-block.second_title {
+    -webkit-transform: translateY(-5px) !important;
+            transform: translateY(-5px) !important;
+    padding: 0 !important;
+    width: 280px !important;
+    margin-top: 0 !important;
+  }
+}
+@media (max-width: 700px) {
+  .contact-form .info-form {
+    width: 90% !important;
+  }
+  .contact-form .info-form p {
+    font-size: 12px !important;
+  }
+
+  .join-univ .content {
+    -ms-grid-columns: 290px 290px !important;
+    grid-template-columns: 290px 290px !important;
+  }
+
+  .entrance .img-row {
+    display: none !important;
+  }
+
+  .about-us img {
+    width: 100% !important;
+  }
+
+  .header-inner h1 {
+    font-size: 40px !important;
+  }
+  .header-inner .content {
+    width: 500px;
+  }
+
+  .feature .structure-main .logo-img {
+    bottom: -140px !important;
+    right: 120px !important;
+  }
+}
+@media (max-width: 665px) {
+  .feature .graph-block {
+    width: 500px !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+    -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
+            align-items: center !important;
+  }
+  .feature .graph-block .second-block {
+    width: 280px !important;
+  }
+  .feature .graph-block .tenis-img {
+    width: 150px !important;
+    top: 60px !important;
+  }
+
+  .scholarship .main-content .team-title {
+    width: 600px !important;
+  }
+  .scholarship .main-content .team-title h3 {
+    padding: 30px 15px !important;
+  }
+
+  .scholarship .under-blocks .subtitle-block {
+    width: 322px !important;
+  }
+
+  .scholarship .under-blocks .subtitle-block .row-titles .second-block {
+    width: 312px !important;
+  }
+}
+@media (max-width: 630px) {
+  .contact-form .info-form {
+    width: 95% !important;
+  }
+
+  .scholarship .main-content .team-title {
+    width: 520px !important;
+  }
+  .scholarship .main-content .team-title h3 {
+    padding: 30px 5px !important;
+    font-size: 15px !important;
+  }
+}
+@media (max-width: 595px) {
+  .contact-form h2 {
+    font-size: 40px !important;
+  }
+  .contact-form .info-form {
+    width: 95% !important;
+  }
+}
+@media (max-width: 580px) {
+  .join-univ .content {
+    -ms-grid-columns: 240px 240px !important;
+    grid-template-columns: 240px 240px !important;
+  }
+
+  .mainSection {
+    padding: 0 10px !important;
+  }
+
+  .scholarship .tennis {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .scholarship .tennis img {
+    padding-right: 0 !important;
+  }
+
+  .scholarship .under-blocks .subtitle-block {
+    width: 264px !important;
+  }
+  .scholarship .under-blocks .subtitle-block p {
+    font-size: 12px !important;
+  }
+
+  .scholarship .under-blocks .subtitle-block .mini-subtitle {
+    max-width: 220px !important;
+  }
+
+  .scholarship .under-blocks .subtitle-block .row-titles .second-block {
+    width: 264px !important;
+  }
+  .scholarship .under-blocks .subtitle-block .row-titles .second-block p {
+    font-size: 12px !important;
+  }
+
+  .header-inner h1 {
+    max-width: 250px !important;
+    font-size: 25px !important;
+    margin: 0 auto !important;
+  }
+}
+@media (max-width: 568px) {
+  .scholarship .under-blocks .subtitle-block {
+    width: 260px !important;
+  }
+
+  .scholarship .under-blocks .subtitle-block .row-titles .second-block {
+    width: 260px !important;
+  }
+
+  .scholarship .under-blocks .subtitle-block .row-titles .subsub-title-block.second_title {
+    width: 260px !important;
+  }
+}
+@media (max-width: 565px) {
+  .contact-form-block {
+    width: 90% !important;
+  }
+}
+@media (max-width: 520px) {
+  .header-inner .content {
+    width: 400px !important;
+  }
+
+  .scholarship .under-blocks .subtitle-block {
+    width: 230px !important;
+  }
+
+  .scholarship .under-blocks .subtitle-block .row-titles .second-block {
+    width: 230px !important;
+  }
+
+  .scholarship .under-blocks .subtitle-block .row-titles .subsub-title-block.second_title {
+    width: 230px !important;
+  }
+
+  .scholarship .under-blocks .subtitle-block {
+    width: 220px !important;
+  }
+
+  .scholarship .under-blocks .subtitle-block .row-titles .second-block {
+    width: 220px !important;
+  }
+
+  .scholarship .under-blocks .subtitle-block .row-titles .subsub-title-block.second_title {
+    width: 220px !important;
+  }
+
+  .scholarship .main-content .team-title {
+    width: 100% !important;
+  }
+}
+@media (max-width: 495px) {
+  .feature .graph-block {
+    width: 400px !important;
+  }
+
+  .feature .graph-block .tenis-img {
+    width: 100px !important;
+  }
+}
+@media (max-width: 485px) {
+  .feature .structure-block .main-graphs .graph-block {
+    width: 450px !important;
+  }
+
+  .feature .graph-block .tenis-img {
+    width: 100px !important;
+  }
+}
+@media (max-width: 485px) {
+  .join-univ .content {
+    -ms-grid-columns: 210px 210px !important;
+    grid-template-columns: 210px 210px !important;
+  }
+
+  .contact-form h2 {
+    font-size: 30px !important;
+  }
+  .contact-form input {
+    width: 220px !important;
+  }
+  .contact-form input::-webkit-input-placeholder {
+    font-size: 12px !important;
+  }
+  .contact-form input::-moz-placeholder {
+    font-size: 12px !important;
+  }
+  .contact-form input:-ms-input-placeholder {
+    font-size: 12px !important;
+  }
+  .contact-form input::-ms-input-placeholder {
+    font-size: 12px !important;
+  }
+  .contact-form input::placeholder {
+    font-size: 12px !important;
+  }
+
+  .feature .structure-main .sub-title-block {
+    width: 425px !important;
+  }
+}
+@media (max-width: 460px) {
+  .join-univ .content {
+    -ms-grid-columns: 190px 190px !important;
+    grid-template-columns: 190px 190px !important;
+  }
+
+  .about-us .info {
+    max-height: inherit !important;
+  }
+
+  .contact-form input {
+    width: 190px !important;
+  }
+  .contact-form input::-webkit-input-placeholder {
+    font-size: 10px !important;
+  }
+  .contact-form input::-moz-placeholder {
+    font-size: 10px !important;
+  }
+  .contact-form input:-ms-input-placeholder {
+    font-size: 10px !important;
+  }
+  .contact-form input::-ms-input-placeholder {
+    font-size: 10px !important;
+  }
+  .contact-form input::placeholder {
+    font-size: 10px !important;
+  }
+
+  .feature .structure-block .main-graphs .graph-block {
+    width: 380px !important;
+  }
+
+  .feature .structure-block .main-graphs .graph-block .tenis-img {
+    width: 80px !important;
+  }
+}
+@media (max-width: 450px) {
+  .header-inner .content {
+    width: 390px !important;
+  }
+  .header-inner .content h1 {
+    font-size: 30px !important;
+  }
+  .header-inner .content .typing-title {
+    font-size: 20px !important;
+  }
+  .header-inner .content .default-title {
+    font-size: 18px;
+    padding: 0 10px !important;
+  }
+
+  .feature .info-card {
+    width: 390px !important;
+  }
+
+  .scholarship .under-blocks .subtitle-block {
+    width: 180px !important;
+  }
+
+  .scholarship .under-blocks .subtitle-block .row-titles .subsub-title-block.second_title {
+    width: 180px !important;
+  }
+
+  .scholarship .under-blocks .subtitle-block .row-titles .second-block {
+    width: 180px !important;
+  }
+}
+@media (max-width: 440px) {
+  .join-univ .content {
+    -ms-grid-columns: 160px 160px !important;
+    grid-template-columns: 160px 160px !important;
+  }
+
+  .about-us .content {
+    text-align: center;
+  }
+
+  .feature .structure-main .sub-title-block {
+    width: 355px !important;
+  }
+
+  .feature .structure-block .main-graphs .graph-block .line {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .header-inner .typing-title {
+    padding: 5px 0 !important;
+  }
+
+  .header-inner .card-info .contact-btn {
+    margin: 30px 0 0 0 !important;
+  }
+
+  .header-inner .content .default-title {
+    font-size: 15px !important;
+  }
+
+  .header-inner .card-info h1 {
+    font-size: 25px !important;
+    padding-top: 15px !important;
+  }
+}
+@media (max-width: 420px) {
+  .header-inner .card-info .content .default-title {
+    padding: 0 !important;
+  }
+
+  .header-inner .content {
+    width: 350px !important;
+  }
+}
+@media (max-width: 400px) {
+  .contact-form input {
+    width: 150px !important;
+    padding: 5px 0 5px 10px !important;
+  }
+  .contact-form input::-webkit-input-placeholder {
+    font-size: 10px !important;
+  }
+  .contact-form input::-moz-placeholder {
+    font-size: 10px !important;
+  }
+  .contact-form input:-ms-input-placeholder {
+    font-size: 10px !important;
+  }
+  .contact-form input::-ms-input-placeholder {
+    font-size: 10px !important;
+  }
+  .contact-form input::placeholder {
+    font-size: 10px !important;
+  }
+
+  .feature .info-card {
+    width: 340px !important;
+  }
+  .feature .info-card p {
+    font-size: 12px !important;
+  }
+
+  .header-inner .content {
+    width: 310px !important;
+  }
+
+  .scholarship .under-blocks .subtitle-block {
+    width: 142px !important;
+  }
+
+  .scholarship .under-blocks .subtitle-block .row-titles .second-block {
+    width: 150px !important;
+  }
+
+  .scholarship .under-blocks .subtitle-block .row-titles .subsub-title-block.second_title {
+    width: 158px !important;
+  }
+
+  .feature .structure-block .main-graphs .graph-block {
+    width: 320px !important;
+  }
+
+  .feature .structure-main .sub-title-block {
+    width: 275px !important;
+  }
+}
+@media (max-width: 360px) {
+  .header-inner .content {
+    width: 300px !important;
+  }
+
+  .join-univ .content {
+    -ms-grid-columns: 150px 150px !important;
+    grid-template-columns: 150px 150px !important;
+  }
+
+  .entrance-new {
+    padding: 0 10px 0 10px !important;
+  }
+  .entrance-new .dates {
+    font-size: 12px !important;
+  }
+  .entrance-new .info-dates {
+    font-size: 12px !important;
+  }
+
+  .contact-form .info-form {
+    width: 100% !important;
+  }
+  .contact-form .info-form p {
+    font-size: 10px !important;
+  }
+  .contact-form input {
+    width: 150px !important;
+    padding: 5px 0 5px 10px !important;
+  }
+  .contact-form input::-webkit-input-placeholder {
+    font-size: 10px !important;
+  }
+  .contact-form input::-moz-placeholder {
+    font-size: 10px !important;
+  }
+  .contact-form input:-ms-input-placeholder {
+    font-size: 10px !important;
+  }
+  .contact-form input::-ms-input-placeholder {
+    font-size: 10px !important;
+  }
+  .contact-form input::placeholder {
+    font-size: 10px !important;
+  }
+}
+@media (max-width: 340px) {
+  .feature .info-card {
+    width: 300px !important;
+  }
+
+  .header-inner .content {
+    width: 280px !important;
+  }
+
+  .feature .structure-block .main-graphs .graph-block .line {
+    max-width: 160px !important;
+  }
+}
+.left-handler {
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  opacity: 0;
+}
+
+.left-anim {
+  -webkit-animation: leftScroll 0.3s ease-in;
+          animation: leftScroll 0.3s ease-in;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes leftScroll {
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes leftScroll {
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+.right-handler {
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+  opacity: 0;
+}
+
+.right-anim {
+  -webkit-animation: rightScroll 0.3s ease-in;
+          animation: rightScroll 0.3s ease-in;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes rightScroll {
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes rightScroll {
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+.top-handler {
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  opacity: 0;
+}
+
+.top-anim {
+  -webkit-animation: rightScroll 0.3s ease-in;
+          animation: rightScroll 0.3s ease-in;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes toptScroll {
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes toptScroll {
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+.bottom-handler {
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+  opacity: 0;
+}
+
+.bottom-anim {
+  -webkit-animation: rightScroll 0.3s ease-in;
+          animation: rightScroll 0.3s ease-in;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes bottomtScroll {
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes bottomtScroll {
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+.height-handler {
+  height: 0 !important;
+}
+
+.height-anim {
+  -webkit-animation: heightScroll 0.3s ease-in !important;
+          animation: heightScroll 0.3s ease-in !important;
+  -webkit-animation-fill-mode: forwards !important;
+          animation-fill-mode: forwards !important;
+}
+
+@-webkit-keyframes heightScroll {
+  100% {
+    height: 100% !important;
+  }
+}
+
+@keyframes heightScroll {
+  100% {
+    height: 100% !important;
+  }
+}
+body {
+  position: relative;
+}
+body .tab-burger-menu {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  height: 1vh;
+}
+body .tab-burger-menu.handleActive {
+  background: rgba(0, 0, 0, 0.8);
+}
+body .tab-burger-menu .item-burger-tab {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+body .tab-burger-menu .item-burger-tab .tab-bar {
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  width: 60%;
+  background: rgba(5, 54, 81, 0.6);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+  -webkit-transform: translateX(200%) !important;
+          transform: translateX(200%) !important;
+  -webkit-transition: -webkit-transform 0.2s linear;
+  transition: -webkit-transform 0.2s linear;
+  transition: transform 0.2s linear;
+  transition: transform 0.2s linear, -webkit-transform 0.2s linear;
+}
+body .tab-burger-menu .item-burger-tab .tab-bar.handleActive {
+  -webkit-transform: translateX(70%) !important;
+          transform: translateX(70%) !important;
+}
+body .tab-burger-menu .item-burger-tab .tab-bar .menu-items {
+  margin-top: 120px;
+}
+body .tab-burger-menu .item-burger-tab .tab-bar .item-burger {
+  margin-top: 20px !important;
+  position: relative;
+  width: 100%;
+}
+body .tab-burger-menu .item-burger-tab .tab-bar .item-burger.line-off::before {
+  height: 0 !important;
+  width: 0 !important;
+}
+body .tab-burger-menu .item-burger-tab .tab-bar .item-burger.active a {
+  font-weight: 700;
+  font-size: 20px !important;
+}
+body .tab-burger-menu .item-burger-tab .tab-bar .item-burger::before {
+  content: "";
+  position: absolute;
+  width: 70%;
+  height: 1px;
+  top: -10px;
+  left: 15%;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), color-stop(50%, white), color-stop(100%, rgba(255, 255, 255, 0)), color-stop(255%, #090979), color-stop(255%, white));
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, white 50%, rgba(255, 255, 255, 0) 100%, #090979 255%, white 255%);
+}
+body .tab-burger-menu .item-burger-tab .tab-bar a {
+  color: #fff;
+  font-size: 15px !important;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+
+.background-black {
+  display: none;
+  z-index: 2;
+}
+.background-black.handleActive {
+  display: block;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+body .burger {
+  margin-right: 30px;
+  z-index: 4;
+  position: fixed;
+  right: 10px;
+  top: 30px;
+}
+body .burger.handleActive .line-burger {
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+body .burger.handleActive .line-burger.up {
+  -webkit-transform: translate(0, 9px) rotate(45deg);
+          transform: translate(0, 9px) rotate(45deg);
+  background: #fff;
+}
+body .burger.handleActive .line-burger.middle {
+  width: 0;
+  opacity: 1;
+}
+body .burger.handleActive .line-burger.down {
+  -webkit-transform: translate(0, -12px) rotate(-45deg);
+          transform: translate(0, -12px) rotate(-45deg);
+  background: #fff;
+}
+body .burger .burger-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 25px;
+  width: 40px;
+}
+body .burger .burger-menu span {
+  width: auto;
+  height: 4px;
+  background-color: #000;
+  -webkit-transition: -webkit-transform 0.2s linear;
+  transition: -webkit-transform 0.2s linear;
+  transition: transform 0.2s linear;
+  transition: transform 0.2s linear, -webkit-transform 0.2s linear;
+  border-radius: 7px;
+}
+
+header {
+  overflow: hidden !important;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+header .logo {
+  margin-left: 30px;
+}
+header .contact-btn {
+  margin-right: 30px;
+}
+
+body {
+  background-color: #FFF;
+}
+
+.mainSection {
+  max-width: 1390px;
+  margin: 0 auto;
+  padding: 0 20px 0 20px;
+  padding-top: 70px;
+}
+.mainSection .high-title-block {
+  padding-bottom: 45px;
+  padding-top: 40px;
+  text-align: center;
+}
+.mainSection .high-title-block h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+}
+.mainSection .high-title-block h2 span {
+  color: #CA0000;
+}
+
+.contact-btn {
+  background-color: #053651;
+  color: #fff;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+.contact-btn:hover {
+  background-color: #05334c;
+}
+
+.tab-burger-menu {
+  z-index: 3;
+}
+.tab-burger-menu .item-burger .active {
+  font-weight: 700;
+}
+.tab-burger-menu .item-burger .active::before {
+  width: 0;
+  height: 0;
+}
+
+.active {
+  font-weight: 700;
+  color: #053651;
+  position: relative;
+}
+.active::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #053651;
+  bottom: 0;
+  -webkit-transform: translate(0, 10px);
+          transform: translate(0, 10px);
+}
+
+.line-cross {
+  height: 2px;
+  width: 100px;
+  -webkit-transform: translate(0, 5px);
+          transform: translate(0, 5px);
+  -webkit-transition: 0.5s ease-in-out all;
+  transition: 0.5s ease-in-out all;
+  background-color: #CA0000;
+}
+
+.header-wrapper a {
+  color: #000;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+}
+.header-wrapper nav {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  max-width: 1670px;
+  margin: 0 auto;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.header-wrapper nav .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+.header-wrapper nav .logo .logoTitle {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 20px;
+  padding-left: 12px;
+  max-width: 65px;
+}
+.header-wrapper nav .logo .logoTitle span {
+  color: #CA0000;
+}
+.header-wrapper nav .nav-items ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.header-wrapper nav .nav-items ul li {
+  padding: 0 7px;
+}
+
+.mini-title-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 30px;
+}
+.mini-title-block .mini-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  padding-left: 60px;
+}
+.mini-title-block .line {
+  width: 119px;
+  height: 10px;
+  background: #053651;
+}
+
+main {
+  padding-top: 30px;
+}
+
+.header-inner {
+  height: 80vh;
+  max-width: 1670px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: no-repeat url("img/BG.jpg");
+}
+.header-inner .card-info {
+  max-width: 840px;
+  max-height: 410px;
+  background-color: #fff;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+.header-inner .card-info .content {
+  padding-left: 60px;
+  padding-right: 80px;
+}
+.header-inner .card-info h1 {
+  padding-top: 45px;
+  font-size: 40px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+.header-inner .card-info h1 span {
+  color: #CA0000;
+}
+.header-inner .card-info .typing-title {
+  font-size: 25px;
+  font-weight: 400;
+  font-family: "Caveat", cursive;
+  color: #053651;
+  padding: 20px 0 15px 0;
+}
+.header-inner .card-info .default-title {
+  max-width: 600px;
+}
+.header-inner .card-info .contact-btn {
+  margin: 30px 0 60px 0;
+}
+
+.join-univ .content {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-columns: 450px 450px 450px;
+  grid-template-columns: 450px 450px 450px;
+}
+.join-univ .content .item-content {
+  height: 320px;
+  max-width: 454px;
+}
+.join-univ .content .title {
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  max-width: 410px;
+  margin: 0 auto;
+  background-color: #fff;
+  text-align: center;
+  padding: 12px 5px;
+}
+.join-univ .content .title h3 {
+  margin: 0 auto;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  max-width: 340px;
+}
+.join-univ .content .title h3 span {
+  color: #CA0000;
+}
+
+.feature .high-title-block p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  max-width: 530px;
+  margin: 0 auto;
+}
+.feature .feature-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 1000px;
+  margin-bottom: 30px;
+}
+.feature .feature-info .info-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 680px;
+  width: 480px;
+  border-radius: 30px;
+  padding: 30px;
+  -webkit-box-shadow: 5px -3px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 5px -3px 30px rgba(0, 0, 0, 0.1);
+}
+.feature .feature-info .info-card p {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+}
+.feature .cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.feature .structure-block {
+  padding-top: 75px;
+  position: relative;
+}
+.feature .structure-block span {
+  color: #053651;
+}
+.feature .structure-block h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  font-size: 30px;
+}
+.feature .structure-block .structure-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.feature .structure-block .structure-main .mini-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  font-size: 15px;
+  padding-top: 0;
+  line-height: 15px;
+  max-width: 640px;
+}
+.feature .structure-block .info-structure {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-left: 35px;
+}
+.feature .structure-block .info-structure.second {
+  -webkit-box-pack: inherit;
+      -ms-flex-pack: inherit;
+          justify-content: inherit;
+}
+.feature .structure-block .info-structure .sub-title-block {
+  padding-left: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 465px;
+}
+.feature .structure-block .info-structure .sub-title-block .sub-title {
+  padding-left: 11px;
+}
+.feature .structure-block .info-structure .sub-title-block .circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #CA0000;
+}
+.feature .structure-block .info-structure .sub-title-block .line {
+  width: 30px;
+  height: 2px;
+  background: #053651;
+}
+.feature .structure-block .info-structure .sub-title-block.down-subtitle {
+  max-width: 320px;
+}
+.feature .structure-block .info-structure .sub-title-block.second-title {
+  padding-top: 15px;
+}
+.feature .structure-block .info-structure h4 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  font-size: 20px;
+}
+.feature .structure-block .info-structure p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+}
+.feature .structure-block .absolute-img {
+  position: absolute;
+  right: 0;
+}
+.feature .structure-block .absolute-img.logo-img {
+  bottom: 30px;
+}
+.feature .structure-block .absolute-img.graph-img {
+  bottom: -30px;
+  right: 20px;
+}
+.feature .structure-block .main-graphs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.feature .structure-block .main-graphs .second-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.feature .structure-block .main-graphs .second-block .numbers p {
+  margin-left: 26px !important;
+}
+.feature .structure-block .main-graphs .second-block .line .line-green {
+  width: 150px;
+}
+.feature .structure-block .main-graphs .second-block .blocks-graph {
+  margin-left: 0 !important;
+}
+.feature .structure-block .main-graphs .second-block .line {
+  -webkit-transform: translateX(20px) !important;
+          transform: translateX(20px) !important;
+}
+.feature .structure-block .main-graphs .second-block .graph {
+  height: 40%;
+}
+.feature .structure-block .main-graphs .second-block .down-title p span {
+  color: #5C8809 !important;
+}
+.feature .structure-block .main-graphs .graph-block {
+  max-width: 630px;
+  width: 640px;
+  padding: 30px;
+  max-width: 640px;
+  border-radius: 0px 0px 30px 30px;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  position: relative;
+}
+.feature .structure-block .main-graphs .graph-block .tenis-img {
+  position: absolute;
+  right: 30px;
+}
+.feature .structure-block .main-graphs .graph-block .title h4 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  font-size: 20px;
+  max-width: 280px;
+}
+.feature .structure-block .main-graphs .graph-block .sub-title {
+  padding-top: 25px;
+}
+.feature .structure-block .main-graphs .graph-block .sub-title p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  font-size: 10px;
+}
+.feature .structure-block .main-graphs .graph-block .line {
+  -webkit-transform: translateX(80px);
+          transform: translateX(80px);
+  padding-top: 10px;
+}
+.feature .structure-block .main-graphs .graph-block .down-title {
+  padding-top: 5px;
+}
+.feature .structure-block .main-graphs .graph-block .down-title p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+}
+.feature .structure-block .main-graphs .graph-block .down-title p span {
+  color: #FF9900;
+}
+.feature .structure-block .main-graphs .graph-block .graph {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 10px;
+}
+.feature .structure-block .main-graphs .graph-block .graph p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  font-size: 10px;
+}
+.feature .structure-block .main-graphs .graph-block .graph .heigt-nums {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.feature .structure-block .main-graphs .graph-block .graph .blocks-graph {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  max-width: 150px;
+  width: 150px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-left: 60px;
+}
+.feature .structure-block .main-graphs .graph-block .graph .blocks-graph .stat-block {
+  width: 22px;
+}
+.feature .structure-block .main-graphs .graph-block .graph .blocks-graph .orange {
+  background: #FF9900;
+}
+.feature .structure-block .main-graphs .graph-block .graph .blocks-graph .orange.first {
+  max-height: 45px;
+  height: 45px;
+}
+.feature .structure-block .main-graphs .graph-block .graph .blocks-graph .orange.second {
+  max-height: 130px;
+  height: 130px;
+}
+.feature .structure-block .main-graphs .graph-block .graph .blocks-graph .orange.third {
+  max-height: 240px;
+  height: 240px;
+}
+.feature .structure-block .main-graphs .graph-block .graph .blocks-graph .orange.four {
+  max-height: 216px;
+  height: 216px;
+}
+.feature .structure-block .main-graphs .graph-block .graph .blocks-graph .orange.five {
+  max-height: 76px;
+  height: 76px;
+}
+.feature .structure-block .main-graphs .graph-block .graph .blocks-graph .green {
+  background: #5C8809;
+}
+.feature .structure-block .main-graphs .graph-block .graph .blocks-graph .green.first {
+  max-height: 45px;
+  height: 45px;
+}
+.feature .structure-block .main-graphs .graph-block .graph .blocks-graph .green.second {
+  max-height: 79px;
+  height: 79px;
+}
+.feature .structure-block .main-graphs .graph-block .graph .blocks-graph .green.third {
+  max-height: 134px;
+  height: 134px;
+}
+.feature .structure-block .main-graphs .graph-block .graph .blocks-graph .green.four {
+  max-height: 144px;
+  height: 144px;
+}
+.feature .structure-block .main-graphs .graph-block .graph .blocks-graph .green.five {
+  max-height: 58px;
+  height: 58px;
+}
+.feature .structure-block .main-graphs .graph-block .numbers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 225px;
+  width: 225px;
+  padding-top: 10px;
+  max-width: 150px;
+  width: 150px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.feature .structure-block .main-graphs .graph-block .numbers p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  font-size: 10px;
+  color: #B1BEC6;
+  margin-left: 25px;
+}
+
+.scholarship .sorts-grants .main-title {
+  background: #053651;
+  width: 100%;
+  border-radius: 30px 30px 0px 0px;
+  text-align: center;
+}
+.scholarship .sorts-grants .main-title h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  color: #fff;
+  font-size: 30px;
+  padding: 23px 0;
+}
+.scholarship .sorts-grants .under-blocks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.scholarship .sorts-grants .subtitle-block {
+  max-width: 650px;
+  width: 650px;
+}
+.scholarship .sorts-grants .subtitle-block .subtitle {
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 0 0 30px 30px;
+  padding: 13px 0;
+  width: 100%;
+  text-align: center;
+}
+.scholarship .sorts-grants .subtitle-block .subtitle .high-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  font-size: 25px;
+}
+.scholarship .sorts-grants .subtitle-block .subtitle p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  font-size: 15px;
+}
+.scholarship .sorts-grants .subtitle-block .row-titles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.scholarship .sorts-grants .subtitle-block .row-titles .second-block {
+  max-width: 530px;
+  width: 530px;
+}
+.scholarship .sorts-grants .subtitle-block .row-titles .second-block p {
+  max-width: 600px;
+}
+.scholarship .sorts-grants .subtitle-block .subsub-title-block {
+  max-width: 300px;
+  text-align: center;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 0 0 30px 30px;
+  padding: 13px 0;
+  margin-top: 15px;
+  max-height: 500px;
+  height: 156px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.scholarship .sorts-grants .subtitle-block .subsub-title-block .high-title {
+  color: #053651;
+  font-family: "Montserrat", sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  font-size: 20px;
+}
+.scholarship .sorts-grants .subtitle-block .subsub-title-block p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  max-width: 280px;
+  margin: 0 auto;
+  padding: 0 18px;
+}
+.scholarship .sorts-grants .subtitle-block .subsub-title-block p.second-title {
+  max-width: 300px;
+}
+.scholarship .sorts-grants .subtitle-block .subsub-title-block .high-block-info {
+  max-width: 530px;
+  width: 530px;
+  margin: 0 auto;
+}
+.scholarship .content {
+  margin-top: 70px;
+}
+.scholarship .content h4 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  font-size: 30px;
+}
+.scholarship .content .main-content {
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.scholarship .content .tennis {
+  max-width: 660px;
+  -webkit-box-shadow: 5px -3px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 5px -3px 30px rgba(0, 0, 0, 0.1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.scholarship .content .tennis .contact-btn {
+  margin-top: 20px;
+}
+.scholarship .content .tennis .title {
+  text-align: center;
+}
+.scholarship .content .tennis .title :nth-child(1) {
+  max-width: 245px;
+  font-size: 15px;
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+}
+.scholarship .content .tennis .title .know-title {
+  color: #053651;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+}
+.scholarship .content .tennis .title span {
+  color: #CA0000;
+}
+.scholarship .content .team {
+  max-width: 800px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.scholarship .content .team .team-title {
+  border: 5px solid #053651;
+  border-radius: 30px;
+  width: 800px;
+  margin-top: 30px;
+  position: relative;
+}
+.scholarship .content .team .team-title img {
+  position: absolute;
+  left: 40%;
+  top: -134px;
+}
+.scholarship .content .team h3 {
+  color: #053651;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+  padding: 30px 45px;
+}
+.scholarship .content .team .titles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 60px;
+}
+.scholarship .content .team .titles :nth-child(2)::before {
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+  position: absolute;
+  left: -30% !important;
+}
+.scholarship .content .team .titles .title-arrow {
+  position: relative;
+}
+.scholarship .content .team .titles .title-arrow::before {
+  content: "";
+  position: absolute;
+  top: -55px;
+  left: 30%;
+  width: 100px;
+  height: 100px;
+  background: no-repeat url("img/arrow.png");
+}
+.scholarship .content .team p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+}
+.scholarship .content .team .info-title {
+  max-width: 440px;
+  text-align: center;
+  padding-top: 22px;
+}
+.scholarship .content .team .info-title span {
+  color: #CA0000;
+}
+
+.entrance .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.entrance .content .info .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 20px;
+}
+.entrance .content .info .item h3 {
+  max-width: 555px;
+  padding-left: 15px;
+}
+
+.service .cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.service .cards .card {
+  -webkit-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px 50px;
+  min-height: 600px;
+}
+.service .cards .card .main-info {
+  padding-top: 40px;
+}
+.service .cards .card .contact-btn {
+  margin-bottom: 30px;
+}
+.service .cards .card .price-title {
+  font-size: 40px;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  color: #CA0000;
+  text-align: center;
+}
+.service .cards .card .info p {
+  padding: 7px 0;
+  position: relative;
+  max-width: 300px;
+}
+.service .cards .card .info p::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 1px;
+  left: -12%;
+  top: 18px;
+  background-color: #CA0000;
+}
+.service .cards .card h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+  color: #053651;
+}
+.service .cards .card .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.entrance-new .high-title-block p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  max-width: 930px;
+  margin: 0 auto;
+}
+.entrance-new .cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.entrance-new .cards .card {
+  max-width: 600px;
+}
+.entrance-new .cards .card .head-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #053651;
+  color: #fff;
+}
+.entrance-new .cards .card .head-info .item {
+  text-align: center;
+}
+.entrance-new .cards .card .head-info .item h4 {
+  font-size: 30px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  padding: 27px 0 10px 0;
+}
+.entrance-new .cards .card .head-info .item p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  max-width: 170px;
+  padding-bottom: 25px;
+}
+.entrance-new .cards .down-info {
+  padding: 17px 26px 5px 26px;
+  border: 1px solid #053651;
+}
+.entrance-new .cards .down-info h3 {
+  color: #053651;
+  text-align: center;
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+.entrance-new .cards .down-info .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.entrance-new .cards .down-info .info p {
+  padding-top: 15px;
+}
+.entrance-new .cards .down-info .info .dates {
+  padding-left: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  font-size: 15px;
+  color: #CA0000;
+}
+.entrance-new .cards .down-info .info .info-dates {
+  padding-left: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+}
+.entrance-new .cards .card-consultations {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  -webkit-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+}
+.entrance-new .cards .card-consultations .high-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #053651;
+  padding-top: 40px;
+}
+.entrance-new .cards .card-consultations .price {
+  color: #CA0000;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  font-size: 40px;
+  padding: 30px 0;
+}
+.entrance-new .cards .card-consultations .default {
+  padding: 0 50px 70px 80px;
+}
+
+.about-us .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.about-us .content .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  max-height: 289px;
+}
+.about-us .content .main-info {
+  max-width: 650px;
+}
+.about-us .content .main-info .default {
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  font-size: 15px;
+  padding-bottom: 10px;
+}
+.about-us .content .main-info .default span {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #CA0000;
+}
+.about-us .content .sub-info {
+  margin: 0 auto;
+  max-width: 515px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  font-size: 15px;
+  text-align: center;
+}
+.about-us .content .sub-info span {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #053651;
+}
+
+.skills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.skills .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+.skills .item.one {
+  background: no-repeat url("img/ecl1.svg");
+  background-position: left 50px top 0px;
+}
+.skills .item.two {
+  background: no-repeat url("img/ecl2.svg");
+  background-position: left 50px top 0px;
+}
+.skills .item.three {
+  background: no-repeat url("img/ecl3.svg");
+  background-position: left 50px top 0px;
+}
+.skills .item.four {
+  background: no-repeat url("img/ecl4.svg");
+  background-position: left 50px top 0px;
+}
+.skills .item p {
+  max-width: 300px;
+  padding-top: 30px;
+  margin: 0 auto;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.team-project .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: center;
+}
+.team-project .content .item {
+  min-width: 300px;
+}
+.team-project .content .item img {
+  border-radius: 30px;
+}
+.team-project .content h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+}
+.team-project .content p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.contacts .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.contacts .content .phone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+}
+.contacts .content .phone a {
+  color: #000;
+}
+.contacts .content .phone img {
+  padding-right: 12px;
+}
+.contacts .content .mail {
+  padding: 30px 0 30px 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+}
+.contacts .content .mail a {
+  color: #000;
+}
+.contacts .content .social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.contacts .content .social .facebook {
+  padding-right: 20px;
+}
+
+footer {
+  background-color: #053651;
+  padding-top: 0;
+}
+footer nav {
+  background-color: #053651 !important;
+}
+footer.mainSection {
+  max-width: initial;
+  margin-top: 40px;
+}
+footer button {
+  background-color: #fff !important;
+  color: #053651 !important;
+}
+footer span {
+  color: #fff !important;
+}
+footer nav {
+  max-width: 1670px;
+  margin: 0 auto;
+}
+footer p {
+  color: #fff;
+}
+footer a {
+  color: #fff !important;
+}
+footer .line {
+  background-color: #fff !important;
+}
+
+.contact-form {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  left: 0;
+  z-index: 2;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.contact-form.activeContact {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  background: rgba(0, 0, 0, 0.8);
+}
+.contact-form .contact-form-block {
+  max-width: 840px;
+  width: 100%;
+  background-color: #fff;
+  z-index: 2;
+  text-align: center;
+  border-radius: 30px;
+  padding: 20px;
+  margin: auto auto;
+}
+.contact-form form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.contact-form form h2 {
+  font-weight: 400;
+  font-size: 70px;
+  font-family: "Playfair Display", serif;
+  padding: 45px 0 30px 0;
+}
+.contact-form form h2 span {
+  color: #CA0000;
+}
+.contact-form form .info-form {
+  width: 70%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.contact-form form .info-form .contact-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 15px;
+}
+.contact-form form .info-form .contact-name input {
+  max-width: 420px;
+  width: 300px;
+  border-radius: 5px;
+  border: 1px solid #053651;
+  padding: 5px 0 5px 30px;
+}
+.contact-form form .info-form .contact-name input::-webkit-input-placeholder {
+  color: #053651;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+}
+.contact-form form .info-form .contact-name input::-moz-placeholder {
+  color: #053651;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+}
+.contact-form form .info-form .contact-name input:-ms-input-placeholder {
+  color: #053651;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+}
+.contact-form form .info-form .contact-name input::-ms-input-placeholder {
+  color: #053651;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+}
+.contact-form form .info-form .contact-name input::placeholder {
+  color: #053651;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+}
+.contact-form form .info-form .contact-name p {
+  font-size: 15px;
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+}
+.contact-form form .btn-block {
+  margin-top: 30px;
+}
+.contact-form form .btn-block button {
+  padding: 12px 50px;
+  background-color: #053651;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
